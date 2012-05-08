@@ -1,0 +1,13 @@
+{% extends "FightmasterGalleryBundle::layout.html.twig" %}
+{% block fightmaster_gallery_sub_title %}{% trans from 'FightmasterGalleryBundle' %}gallery.header.new{% endtrans %}{% endblock %}
+{% block fightmaster_gallery_content %}
+{% form_theme form 'FightmasterGalleryBundle::form.html.twig' %}
+<h1>{% trans from 'FightmasterGalleryBundle' %}gallery.header.new{% endtrans %}</h1>
+
+<form action="{{ path('FightmasterGalleryBundle_Gallery_create') }}" method="post" {{ form_enctype(form) }} class="form-inline form-horizontal">
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit" class="btn btn-primary">{% trans from 'FightmasterGalleryBundle' %}button.create{% endtrans %}</button>
+    </p>
+</form>
+{% endblock fightmaster_gallery_content %}

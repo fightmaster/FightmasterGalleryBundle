@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ This file is part of the FightmasterPublicationBundle package.
+
+ (c) Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
+
+ This source file is subject to the MIT license that is bundled
+ with this source code in the file LICENSE.
+-->
+
+<doctrine-mongo-mapping xmlns="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
+                        http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
+
+    <mapped-superclass name="Fightmaster\GalleryBundle\Model\Gallery" collection="fightmaster_gallery_gallery">
+
+        <field name="name" fieldName="title" type="string" />
+
+    </mapped-superclass>
+
+</doctrine-mongo-mapping>

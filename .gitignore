@@ -1,0 +1,10 @@
+vendor/symfony
+vendor/doctrine
+vendor/doctrine-common
+vendor/doctrine-dbal
+vendor/doctrine-mongodb-odm
+vendor/doctrine-mongodb
+vendor/dao
+vendor/bundles
+phpunit.xml
+Tests/autoload.php

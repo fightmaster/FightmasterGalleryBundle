@@ -1,0 +1,17 @@
+button:
+    create: Создать
+    delete: Удалить
+    edit: Редактировать
+gallery:
+    header:
+        new: Создание галереи
+        edit: Редактирование галереи
+    confirm:
+        remove: Вы уверены, что хотите удалить галерею
+    links:
+        back_to_list: Вернуться к списку галерей
+    errors:
+        unable_to_find: Unable to find Gallery entity (id: %id%)
+    form:
+        labels:
+            name: Название галереи

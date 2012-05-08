@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+ This file is part of the SarSportApplicationBundle package.
+
+ (c) Dmitry Petrov aka fightmaster <old.fightmaster@gmail.com>
+
+ This source file is subject to the MIT license that is bundled
+ with this source code in the file LICENSE.
+-->
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="fightmaster_gallery.listener.gallery_blamer" class="Fightmaster\Bundle\GalleryBundle\EventListener\GalleryBlamerListener">
+            <!-- TODO: 2.1 <tag name="kernel.event_subscriber" /> -->
+            <tag name="kernel.event_listener" event="fightmaster_gallery.gallery.pre_persist" method="blame" />
+            <argument type="service" id="security.context" on-invalid="null" />
+            <argument type="service" id="logger" on-invalid="null" />
+        </service>
+    </services>
+</container>

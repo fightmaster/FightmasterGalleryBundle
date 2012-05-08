@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+{% block sub_title %}. {% block fightmaster_gallery_sub_title %} {% endblock %}{% endblock %}
+{% block stylesheets %}
+    {% stylesheets '@FightmasterGalleryBundle/Resources/public/css/style.css'%}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+    {% endstylesheets %}
+{% endblock %}
+{% block flashMessages %}
+    {% for key, message in app.session.getFlashes() %}
+    <div class="{{ key }}">
+        {{ message|trans({}, 'FightmasterGalleryBundle') }}
+    </div>
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+    {% block fightmaster_gallery_content %}
+    {% endblock fightmaster_gallery_content %}
+{% endblock  %}
